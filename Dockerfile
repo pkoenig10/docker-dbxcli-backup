@@ -1,7 +1,6 @@
-FROM golang
+FROM ubuntu
 
-ENV DBXCLI_VERSION v3.0.0
-ADD https://github.com/dropbox/dbxcli/releases/download/$DBXCLI_VERSION/dbxcli-linux-amd64 /usr/local/bin/dbxcli
+ADD https://github.com/dropbox/dbxcli/releases/download/v3.0.0/dbxcli-linux-amd64 /usr/local/bin/dbxcli
 RUN chmod +x /usr/local/bin/dbxcli
 
 COPY backup.sh /
